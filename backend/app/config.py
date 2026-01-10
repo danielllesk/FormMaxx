@@ -7,7 +7,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') 
     
     GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
-    GEMINI_MODEL = 'gemini-2.5-pro'
+    GEMINI_MODEL = 'gemini-2.5-flash'  # Using flash model for free tier compatibility
     
     MAX_CONTENT_LENGTH = 100 * 1024 * 1024
     UPLOAD_FOLDER = '/tmp/formmaxx_uploads'
