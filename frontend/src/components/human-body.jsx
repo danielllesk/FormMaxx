@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { Navigate } from 'react-router-dom';
-import Muscle from './button.js'
+import Muscle from 'muscle-select-button.jsx';
 
 export default function HumanBody() {
     const Navigate  = useNavigate(); 

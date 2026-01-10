@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MuscleSelectButton = ({label, onClick, className, disabled}) => {
+const MuscleSelectButton = ({label, onClick}) => {
     return (
-        <button onClick={onClick} className={className} disabled={disabled}>
+        <button onClick={onClick}>
             {label}
         </button>
     );
