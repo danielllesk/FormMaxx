@@ -1,4 +1,4 @@
-import React from 'react';
+import './exersize-card.css';
 
 const ExersizeCard = ({exercise, description, exerciseImage}) => {
     return (

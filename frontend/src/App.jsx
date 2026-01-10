@@ -4,6 +4,8 @@ import './App.css'
 import HumanBody from './components/human-body.jsx'
 import MuscleSelectButton from './components/muscle-select-button.jsx'
 import Exercise from './components/exercise.jsx'
+import ExersizeCard from './components/exersize-card.jsx'
+import BarbellCurlsImage from './assets/BarbellCurls.png'
 
 function App() {
   const [count, setCount] = useState(0)

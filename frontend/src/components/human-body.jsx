@@ -6,20 +6,20 @@ import './human-body.css';
 
 export default function HumanBody() {
     const navigate  = useNavigate(); 
-    const humanMuscles = [ { label: 'Biceps', onClick: handleClick, className:'Biceps' },
-                            { label: 'Triceps', onClick: handleClick, className:'Triceps' },
-                            { label: 'Shoulders', onClick: handleClick, className:'Shoulders' },
-                            { label: 'Chest', onClick: handleClick, className:'Chest'  },
-                            {label: 'Abdomen', onClick: handleClick, className:'Abdomen'},
-                            {label: 'Quadriceps', onClick: handleClick, className:'Quadriceps'},
-                            {label: 'Hamstrings', onClick: handleClick, className:'Hamstrings'},
-                            { label: 'Calves', onClick: handleClick, className:'Calves'},
-                            {label: 'Glutes', onClick: handleClick, className:'Glutes'},
-                            { label: 'Forearms', onClick: handleClick, className:'Forearms' },
-                            { label: 'Lats', onClick: handleClick, className:'Lats' },
-                            { label: 'Traps', onClick: handleClick, className:'Traps' },
-                            { label: 'Upper Back', onClick: handleClick, className:'UpperBack' },
-    ]
+    const humanMuscles = [ { label: 'Biceps', onClick: handleClick, description: 'A classic biceps isolation exercise focusing on elbow flexion.', exerciseImage: 'barbell-curl.png'},
+                            { label: 'Triceps', onClick: handleClick },
+                            { label: 'Shoulders', onClick: handleClick },
+                            { label: 'Chest', onClick: handleClick  },
+                            {label: 'Abdomen', onClick: handleClick},
+                            {label: 'Quandriceps', onClick: handleClick},
+                            {label: 'Hamstrings', onClick: handleClick},
+                            { label: 'Calves', onClick: handleClick},
+                            {label: 'Glutes', onClick: handleClick},
+                            { label: 'Forearms', onClick: handleClick },
+                            { label: 'Lats', onClick: handleClick },
+                            { label: 'Traps', onClick: handleClick },
+                            { label: 'Upper Back', onClick: handleClick },
+                            ]
     function handleClick(muscle) {
         navigate("/exercise", { state: { muscle: muscle.label } })
     }
