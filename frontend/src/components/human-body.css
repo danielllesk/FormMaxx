@@ -14,6 +14,7 @@
   top: 27%;
   left: 23%;
   transform: translate(-50%, -50%) rotate(-60deg);
+  display: hidden; 
 }
 
 .Triceps {
@@ -99,4 +100,8 @@
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.Bicep:hover {
+    background-color: yellow;
 }
