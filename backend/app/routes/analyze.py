@@ -296,17 +296,22 @@ def analyze():
             model = genai.GenerativeModel(Config.GEMINI_MODEL)
             
             video_file_gemini = genai.upload_file(path=temp_video_path)
-            
-            while video_file_gemini.state.name == "PROCESSING":
+
+            max_wait_time = 30  
+            wait_time = 0
+            while video_file_gemini.state.name == "PROCESSING" and wait_time < max_wait_time:
                 time.sleep(2)
+                wait_time += 2
                 video_file_gemini = genai.get_file(video_file_gemini.name)
             
             if video_file_gemini.state.name == "FAILED":
-                raise Exception("Video file upload to Gemini failed")
+                error_msg = f"Video file upload to Gemini failed"
+                if hasattr(video_file_gemini, 'error'):
+                    error_msg += f": {video_file_gemini.error}"
+                raise Exception(error_msg)
             
             response = model.generate_content(
-                [video_file_gemini, prompt],
-                request_options={'timeout': Config.GEMINI_TIMEOUT}
+                [video_file_gemini, prompt]
             )
             
             response_text = response.text.strip()
@@ -326,9 +331,14 @@ def analyze():
             return jsonify(cleaned_response), 200
         
         except json.JSONDecodeError as e:
+            print(f"JSON decode error: {e}")
+            print(f"Response text: {response_text if 'response_text' in locals() else 'N/A'}")
             return jsonify(get_fallback_response(target_muscle)), 200
         
         except Exception as e:
+            print(f"Gemini API error: {type(e).__name__}: {str(e)}")
+            import traceback
+            traceback.print_exc()
             return jsonify(get_fallback_response(target_muscle)), 200
         
         finally:
