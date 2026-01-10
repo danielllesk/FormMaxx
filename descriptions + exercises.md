@@ -82,10 +82,10 @@
 2. Grip the handles and press upward until arms are extended without locking elbows.
 3. Lower the handles under control back to the starting position.
 4. The deeper you go, the more side delt you target where the top half of the movement used mostly front delt.
-**Target Muscles:** Deltoids, triceps, upper chest  
+**Target Muscles:** Deltoids, triceps
 **Plane of Movement:** Sagittal  
 **Alternatives:** Barbell overhead press, dumbbell shoulder press  
-**Limiting Factors:** Machine fit, shoulder mobility
+**Limiting Factors:** Machine fit, shoulder mobility, tricep fatigue
 
 ### 2. Lateral Raise
 **Description:** Isolates the lateral deltoid.  
