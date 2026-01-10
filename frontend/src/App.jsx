@@ -1,21 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import HumanBody from './components/human-body'
+import MuscleSelectButton from './components/muscle-select-button.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div>
+    <MuscleSelectButton label="Muscle Select Button" onClick={() => console.log('clicked')} className="muscle-select-button" disabled={false} />
+    
     <BrowserRouter>
       <Routes> 
         <Route path="/" element={<HumanBody />} />
-        <Route path="/" element={} />
+        {/* <Route path="/" element={} /> */}
       </Routes>
     </BrowserRouter>
-    </>
+    </div>
   );
 }
 
