@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { exerciseMap, getMuscleGroupByExerciseName } from './exerciseMap';
 import './exersize-card.css';
 
 const ExersizeCard = ({exercise, description, exerciseImage}) => {
     const navigate = useNavigate();
-    function handleClick() {
-        navigate("/instructions", {state: exercise})
+    const muscleex = {
+        muscle: getMuscleGroupByExerciseName(exerciseMap, exercise),
+        ex: exercise
     }
     return (
         <div className="exersize-card">
@@ -13,7 +15,7 @@ const ExersizeCard = ({exercise, description, exerciseImage}) => {
                 <img src={exerciseImage} alt={exercise} />
             </div>
             <p className="exersize-description">{description}</p>
-            <button className="exersize-button" onClick={() => navigate("/instructions", {state: {exercise: exercise}})}>This Exercise</button>
+            <button className="exersize-button" onClick={() => navigate("/instructions", {state: {total: muscleex}})}>This Exercise</button>
         </div>
     );
 };

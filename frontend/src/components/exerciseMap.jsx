@@ -169,3 +169,11 @@ export const getExerciseByName = (exerciseName) => {
     }
     return null;
 };
+export function getMuscleGroupByExerciseName(exerciseMap, exerciseName) {
+  for (const [muscleGroup, exercises] of Object.entries(exerciseMap)) {
+    if (exercises.some(ex => ex.name === exerciseName)) {
+      return muscleGroup;
+    }
+  }
+  return null; 
+}; 
