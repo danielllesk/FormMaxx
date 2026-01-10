@@ -252,18 +252,21 @@
 ## Calves
 
 ### 1. Standing Calf Raise
+**Description:** Raises the heels against resistance to build the gastrocnemius through ankle plantarflexion.
 **Target:** Gastrocnemius  
 **Plane:** Sagittal  
 **Alternatives:** Smith machine raises  
 **Limiting Factors:** Ankle mobility
 
 ### 2. Seated Calf Raise
+**Description:** Trains the soleus by performing calf raises with bent knees under load.
 **Target:** Soleus  
 **Plane:** Sagittal  
 **Alternatives:** Dumbbell calf raises  
 **Limiting Factors:** Load tolerance
 
 ### 3. Single-Leg Calf Raise
+**Description:** Improves calf strength and ankle stability by loading one leg at a time.
 **Target:** Calves, ankle stabilizers  
 **Plane:** Sagittal  
 **Alternatives:** Assisted versions  
@@ -274,18 +277,21 @@
 ## Glutes
 
 ### 1. Hip Thrust
+**Description:** Extends the hips against resistance to maximally activate the gluteus maximus.
 **Target:** Glute max  
 **Plane:** Sagittal  
 **Alternatives:** Glute bridge  
 **Limiting Factors:** Hip mobility
 
 ### 2. Bulgarian Split Squat
+**Description:** Develops unilateral glute and quad strength with a rear-foot-elevated stance.
 **Target:** Glutes, quads  
 **Plane:** Sagittal  
 **Alternatives:** Reverse lunges  
 **Limiting Factors:** Balance
 
 ### 3. Cable Kickback
+**Description:** Isolates the glutes through controlled hip extension using constant cable tension.
 **Target:** Glutes  
 **Plane:** Sagittal  
 **Alternatives:** Resistance band kickbacks  
@@ -296,18 +302,21 @@
 ## Forearms
 
 ### 1. Wrist Curl
+**Description:** Strengthens forearm flexors through repeated wrist flexion under load.
 **Target:** Forearm flexors  
 **Plane:** Sagittal  
 **Alternatives:** Bar hangs  
 **Limiting Factors:** Wrist strain
 
 ### 2. Reverse Curl
+**Description:** Targets the brachioradialis by curling weight with a pronated grip.
 **Target:** Brachioradialis  
 **Plane:** Sagittal  
 **Alternatives:** Hammer curls  
 **Limiting Factors:** Grip strength
 
 ### 3. Farmer’s Carry
+**Description:** Builds grip and forearm endurance by carrying heavy loads over distance.
 **Target:** Forearms, grip  
 **Plane:** Sagittal  
 **Alternatives:** Suitcase carries  
@@ -318,18 +327,21 @@
 ## Lats
 
 ### 1. Pull-Up
+**Description:** Strengthens the lats by pulling the body vertically against gravity.
 **Target:** Latissimus dorsi  
 **Plane:** Frontal  
 **Alternatives:** Lat pulldown  
 **Limiting Factors:** Bodyweight strength
 
 ### 2. Lat Pulldown
+**Description:** Mimics a pull-up to train the lats using adjustable resistance.
 **Target:** Lats  
 **Plane:** Frontal  
 **Alternatives:** Assisted pull-ups  
 **Limiting Factors:** Elbow strain
 
 ### 3. Straight-Arm Pulldown
+**Description:** Isolates the lats by extending the shoulders with straight arms.
 **Target:** Lats  
 **Plane:** Sagittal  
 **Alternatives:** Resistance band pulldowns  
@@ -340,18 +352,21 @@
 ## Traps
 
 ### 1. Shrugs
+**Description:** Elevates the shoulders under load to strengthen the upper trapezius.
 **Target:** Upper traps  
 **Plane:** Sagittal  
 **Alternatives:** Farmer’s carries  
 **Limiting Factors:** Neck tension
 
 ### 2. Upright Row
+**Description:** Pulls weight vertically to engage the upper traps and shoulders.
 **Target:** Upper traps, delts  
 **Plane:** Frontal  
 **Alternatives:** High pulls  
 **Limiting Factors:** Shoulder impingement
 
 ### 3. Face Pull
+**Description:** Retracts and externally rotates the shoulders to target mid traps and rear delts.
 **Target:** Mid traps  
 **Plane:** Transverse  
 **Alternatives:** Band pull-aparts  
@@ -362,18 +377,21 @@
 ## Upper Back
 
 ### 1. Bent-Over Row
+**Description:** Pulls weight toward the torso to develop upper-back thickness and strength.
 **Target:** Rhomboids, lats  
 **Plane:** Sagittal  
 **Alternatives:** Chest-supported row  
 **Limiting Factors:** Lower back fatigue
 
 ### 2. Seated Cable Row
+**Description:** Trains the upper back through horizontal pulling with constant tension.
 **Target:** Upper back  
 **Plane:** Sagittal  
 **Alternatives:** Resistance band rows  
 **Limiting Factors:** Grip strength
 
 ### 3. T-Bar Row
+**Description:** Builds dense upper-back musculature using a fixed-bar rowing motion.
 **Target:** Upper back thickness  
 **Plane:** Sagittal  
 **Alternatives:** Dumbbell rows  
