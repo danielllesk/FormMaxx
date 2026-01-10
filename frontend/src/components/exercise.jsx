@@ -1,21 +1,33 @@
 import {useLocation, Link} from "react-router-dom";
 import ExersizeCard from './exersize-card.jsx';
-import BarbellCurlsImage from '../assets/BarbellCurls.png';
+import { getExercisesForMuscle } from './exerciseMap.jsx';
 import './exercise.css';
 
 export default function Exercise() {
     const location = useLocation();
     const selectedMuscle = location.state?.muscle || "No muscle selected";
+
+    const exercises = getExercisesForMuscle(selectedMuscle);
     return (
-        <div>
+        <div className="exercise-page">
             <div className="exercise-header">
-                <Link to="/" className="back-button">← Go Back</Link>
+                <Link to="/" className="back-button">Go Back</Link>
                 <h1>Exercises for {selectedMuscle}</h1>
             </div>
             <div className="exercise-cards-container">
-                <ExersizeCard exercise="Barbell Curl" description="A classic biceps isolation exercise focusing on elbow flexion." exerciseImage={BarbellCurlsImage} />
-                <ExersizeCard exercise="Hammer Curl" description="Targets the brachialis and brachioradialis for overall arm development." exerciseImage={BarbellCurlsImage} />
-                <ExersizeCard exercise="Preacher Curl" description="Isolates the biceps with strict form and reduced momentum." exerciseImage={BarbellCurlsImage} />
+                {exercises.length > 0 ? (exercises.map((exercise, index) => (
+                        <ExersizeCard 
+                            key={index}
+                            exercise={exercise.name}
+                            description={exercise.description}
+                            exerciseImage={exercise.image}
+                        />
+                    ))
+                ) : (
+                    <p style={{color: 'white', textAlign: 'center', width: '100%'}}>
+                        No exercises found for {selectedMuscle}
+                    </p>
+                )}
             </div>
         </div>
     );
