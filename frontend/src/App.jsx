@@ -11,7 +11,7 @@ function App() {
     <div>
     <MuscleSelectButton label="Muscle Select Button" onClick={() => console.log('clicked')} className="muscle-select-button" disabled={false} />
     <BrowserRouter>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<HumanBody />} />
         {/* <Route path="/" element={} /> */}
       </Routes>
