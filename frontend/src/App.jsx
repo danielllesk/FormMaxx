@@ -12,7 +12,7 @@ function App() {
     <div>
     <MuscleSelectButton label="Muscle Select Button" onClick={() => console.log('clicked')} />
     <BrowserRouter>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<HumanBody />} />
         <Route path="/exercise" element={<Exercises />} />
         {/* <Route path="/" element={} /> */}
