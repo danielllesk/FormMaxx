@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import './exersize-card.css';
 
 const ExersizeCard = ({exercise, description, exerciseImage}) => {
+    const navigate = useNavigate();
+    function handleClick() {
+        navigate("/instructions", {state: exercise})
+    }
     return (
         <div className="exersize-card">
             <h3 className="exersize-title">{exercise}</h3>
@@ -8,7 +13,7 @@ const ExersizeCard = ({exercise, description, exerciseImage}) => {
                 <img src={exerciseImage} alt={exercise} />
             </div>
             <p className="exersize-description">{description}</p>
-            <button className="exersize-button">This Exercise</button>
+            <button className="exersize-button" onClick={() => navigate("/instructions", {state: {exercise: exercise}})}>This Exercise</button>
         </div>
     );
 };

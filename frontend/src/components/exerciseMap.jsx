@@ -7,16 +7,19 @@ export const exerciseMap = {
         {
             name: 'Barbell Curls',
             description: 'A classic biceps isolation exercise focusing on elbow flexion.',
+            instructions: '1. Stand upright holding a barbell with palms facing forward (supinated grip).\n2. Keep elbows close to your torso, and fixed.\n3. Curl the bar upward toward your shoulders.\n4. Focus on elbow flexion and no sway while going up',
             image: BarbellCurlsImage
         },
         {
             name: 'Hammer Curls',
             description: 'Targets the brachialis and brachioradialis for overall arm development.',
+            instructions: '1. Hold dumbbells by your sides, with ends parallel to your body\n2. Curl weights upward without rotating wrists.\n3. Focus on keeping wrists strong and again no sway in your movement.',
             image: HammerCurlsImage
         },
         {
             name: 'Preacher Curls',
             description: 'Isolates the biceps with strict form and reduced momentum.',
+            instructions: '1. Sit at a preacher bench and place upper arms (triceps) flat against the pad.\n2. Grip the barbell or dumbbells with palms facing upward.\n3. Curl the weight upward until the elbows are flexed, then slowly lower under control.\n4. Make sure you fully extend and are using a weight comfortable for you. Not training the lower half of this movement is what causes injuries!',
             image: PreacherCurlsImage
         }
     ],
