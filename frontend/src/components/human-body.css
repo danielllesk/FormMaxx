@@ -1,0 +1,102 @@
+.human-body-container {
+  position: relative;
+  display: inline-block;
+}
+
+.Human-img {
+  width: 100%;
+  height: auto;
+}
+
+.Biceps {
+  position: absolute;
+  padding: 3px 6px;  
+  top: 27%;
+  left: 23%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.Triceps {
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+
+.Shoulders {
+  position: absolute;
+  padding: 3px 6px;  
+  top: 20%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.Chest {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.Abdomen {
+  position: absolute;
+  top: 45%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.Quadriceps {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.Hamstrings {
+  position: absolute;
+  top: 60%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.Calves {
+  position: absolute;
+  top: 75%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.Glutes {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.Forearms {
+  position: absolute;
+  top: 45%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+
+.Lats {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.Traps {
+  position: absolute;
+  top: 20%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+}
+
+.UpperBack {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
