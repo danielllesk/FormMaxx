@@ -12,7 +12,6 @@ function App() {
     <BrowserRouter>
       <Routes> 
         <Route path="/" element={<HumanBody />} />
-        <Route path="/" element={} />
       </Routes>
     </BrowserRouter>
     </>
