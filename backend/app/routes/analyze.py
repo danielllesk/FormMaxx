@@ -247,25 +247,32 @@ def analyze():
         
 
         target_muscles = exercise_data.get('target_muscles', [])
-        if isinstance(target_muscles, list) and len(target_muscles) > 0:
-            target_muscle = target_muscles[0]
+        
+        if isinstance(target_muscles, list):
+            mapped_muscles = [Config.map_muscle_to_valid(m) for m in target_muscles]
+            seen = set()
+            mapped_muscles = [m for m in mapped_muscles if m not in seen and not seen.add(m)]
+            exercise_data['target_muscles'] = mapped_muscles
+            target_muscle = mapped_muscles[0] if mapped_muscles else 'hamstrings'
         elif isinstance(target_muscles, str):
-            target_muscle = target_muscles
+            target_muscle = Config.map_muscle_to_valid(target_muscles)
+            exercise_data['target_muscles'] = [target_muscle]
         else:
             target_muscle = 'hamstrings'
+            exercise_data['target_muscles'] = [target_muscle]
         
         target_muscle_normalized = str(target_muscle).lower().replace(' ', '_')
-        
         target_muscle = target_muscle_normalized
         
-        if 'target_muscles' in exercise_data:
-            if isinstance(exercise_data['target_muscles'], list):
+        valid_muscles_set = set(Config.VALID_MUSCLES)
+        if target_muscle not in valid_muscles_set:
+
+            target_muscle = 'hamstrings'
+            if 'target_muscles' in exercise_data:
                 exercise_data['target_muscles'] = [
-                    str(m).lower().replace(' ', '_') 
-                    for m in exercise_data['target_muscles']
-                ]
-            else:
-                exercise_data['target_muscles'] = [target_muscle]
+                    m for m in exercise_data['target_muscles'] 
+                    if m in valid_muscles_set
+                ] or ['hamstrings']
         
         if not Config.GEMINI_API_KEY:
             return jsonify({
