@@ -12,8 +12,6 @@ function App() {
 
   return (
     <div>
-    <ExersizeCard exercise="Barbell Curl" description="A classic biceps isolation exercise focusing on elbow flexion." exerciseImage={BarbellCurlsImage} />
-    <MuscleSelectButton label="Muscle Select Button" onClick={() => console.log('clicked')} />
     <BrowserRouter>
       <Routes> 
         <Route path="/" element={<HumanBody />} />

@@ -5,10 +5,7 @@ import MuscleSelectButton from './muscle-select-button.jsx'
 import './human-body.css';
 
 export default function HumanBody() {
-    const Navigate  = useNavigate(); 
-    function handleClick() {
-        Navigate('/exercise');
-    }
+    const navigate  = useNavigate(); 
     const humanMuscles = [ { label: 'Biceps', onClick: handleClick, description: 'A classic biceps isolation exercise focusing on elbow flexion.', exerciseImage: 'barbell-curl.png'},
                             { label: 'Triceps', onClick: handleClick },
                             { label: 'Shoulders', onClick: handleClick },
