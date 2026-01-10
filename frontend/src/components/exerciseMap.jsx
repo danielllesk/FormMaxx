@@ -1,6 +1,6 @@
-import BarbellCurlsImage from '../assets/BarbellCurls.png';
-import HammerCurlsImage from '../assets/HammerCurls.jpeg';
-import PreacherCurlsImage from '../assets/PreacherCurls.jpeg';
+import BarbellCurlsImage from '../assets/biceps/BarbellCurls.png';
+import HammerCurlsImage from '../assets/biceps/HammerCurls.jpeg';
+import PreacherCurlsImage from '../assets/biceps/PreacherCurls.jpeg';
 
 export const exerciseMap = {
     Biceps: [
@@ -25,131 +25,206 @@ export const exerciseMap = {
     ],
     Triceps: [
         {
-            name: 'Tricep Dips',
-            description: 'Compound exercise for triceps, chest, and shoulders.',
+            name: 'JM Press',
+            description: 'Hybrid pressing movement that combines elements of a close-grip bench press and skullcrusher, emphasizing elbow extension with reduced shoulder involvement.',
             image: BarbellCurlsImage
         },
         {
-            name: 'Skull Crushers',
-            description: 'Isolation exercise targeting all three heads of the triceps.',
+            name: 'Triceps Pushdown',
+            description: 'Isolation exercise using cables for constant tension.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Overhead Triceps Extension',
+            description: 'Targets the medial and lateral head of the triceps.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Shoulders: [
         {
-            name: 'Overhead Press',
-            description: 'Compound movement for overall shoulder development.',
+            name: 'Machine Shoulder Press',
+            description: 'Guided compound shoulder press that provides stability and consistent resistance through the pressing range of motion.',
             image: BarbellCurlsImage // Placeholder
         },
         {
             name: 'Lateral Raises',
-            description: 'Isolation exercise targeting the lateral deltoids.',
+            description: 'Isolates the lateral deltoid.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Rear Delt Fly',
+            description: 'Targets posterior shoulders and upper back.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Chest: [
         {
             name: 'Bench Press',
-            description: 'Primary compound movement for chest development.',
+            description: 'Primary chest compound lift.',
             image: BarbellCurlsImage // Placeholder
         },
         {
-            name: 'Push-ups',
-            description: 'Bodyweight exercise for chest, shoulders, and triceps.',
+            name: 'Incline Dumbbell Press',
+            description: 'Emphasizes upper chest.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Chest Fly',
+            description: 'Isolation movement for chest stretch and contraction.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Abdomen: [
         {
-            name: 'Crunches',
-            description: 'Classic abdominal exercise for core strength.',
+            name: 'Plank',
+            description: 'Anti-extension core exercise.',
             image: BarbellCurlsImage // Placeholder
         },
         {
-            name: 'Planks',
-            description: 'Isometric hold for overall core stability.',
+            name: 'Hanging Leg Raise',
+            description: 'Dynamic core flexion exercise.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Russian Twist',
+            description: 'Rotational core movement.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Quandriceps: [
         {
-            name: 'Squats',
-            description: 'King of leg exercises for overall lower body development.',
+            name: 'Squat',
+            description: 'Primary lower-body compound movement.',
             image: BarbellCurlsImage // Placeholder
         },
         {
-            name: 'Leg Extensions',
-            description: 'Isolation exercise for quadriceps development.',
+            name: 'Leg Press',
+            description: 'Machine-based quad emphasis.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Leg Extension',
+            description: 'Isolation quad exercise.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Hamstrings: [
         {
             name: 'Romanian Deadlifts',
-            description: 'Targets hamstrings and glutes with hip hinge movement.',
+            description: 'Hip hinge focusing on hamstrings.',
             image: BarbellCurlsImage // Placeholder
         },
         {
-            name: 'Leg Curls',
-            description: 'Isolation exercise for hamstring development.',
+            name: 'Lying Leg Curl',
+            description: 'Knee flexion isolation.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Nordic Curl',
+            description: 'Eccentric hamstring strength.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Calves: [
         {
-            name: 'Calf Raises',
-            description: 'Standing or seated raises for calf development.',
+            name: 'Standing Calf Raise',
+            description: 'Raises the heels against resistance to build the gastrocnemius through ankle plantarflexion.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Seated Calf Raise',
+            description: 'Trains the soleus by performing calf raises with bent knees under load.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Single-Leg Calf Raise',
+            description: 'Improves calf strength and ankle stability by loading one leg at a time.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Glutes: [
         {
             name: 'Hip Thrusts',
-            description: 'Primary exercise for glute activation and growth.',
+            description: 'Extends the hips against resistance to maximally activate the gluteus maximus.',
             image: BarbellCurlsImage // Placeholder
         },
         {
-            name: 'Glute Bridges',
-            description: 'Bodyweight exercise for glute activation.',
+            name: 'Bulgarian Split Squat',
+            description: 'Develops unilateral glute and quad strength with a rear-foot-elevated stance.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Cable Kickback',
+            description: 'Isolates the glutes through controlled hip extension using constant cable tension.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Forearms: [
         {
             name: 'Wrist Curls',
-            description: 'Isolation exercise for forearm flexors.',
+            description: 'Strengthens forearm flexors through repeated wrist flexion under load.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Reverse Curl',
+            description: 'Targets the brachioradialis by curling weight with a pronated grip.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Farmer’s Carry',
+            description: 'Builds grip and forearm endurance by carrying heavy loads over distance.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Lats: [
         {
-            name: 'Pull-ups',
-            description: 'Compound exercise for overall back development.',
+            name: 'Pull-Up',
+            description: 'Strengthens the lats by pulling the body vertically against gravity.',
             image: BarbellCurlsImage // Placeholder
         },
         {
-            name: 'Lat Pulldowns',
-            description: 'Machine exercise targeting the latissimus dorsi.',
+            name: 'Lat Pulldown',
+            description: 'Mimics a pull-up to train the lats using adjustable resistance.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Straight-Arm Pulldown',
+            description: 'Isolates the lats by extending the shoulders with straight arms.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     Traps: [
         {
             name: 'Shrugs',
-            description: 'Isolation exercise for upper trapezius development.',
+            description: 'Elevates the shoulders under load to strengthen the upper trapezius.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Upright Row',
+            description: 'Pulls weight vertically to engage the upper traps and shoulders.',
+            image: BarbellCurlsImage // Placeholder
+        },
+        {
+            name: 'Face Pull',
+            description: 'Retracts and externally rotates the shoulders to target mid traps and rear delts.',
             image: BarbellCurlsImage // Placeholder
         }
     ],
     'Upper Back': [
         {
-            name: 'Rows',
-            description: 'Compound movement for upper back thickness.',
+            name: 'Bent-Over Row',
+            description: 'Builds dense upper-back musculature using a fixed-bar rowing motion.',
             image: BarbellCurlsImage 
         },
         {
-            name: 'Face Pulls',
-            description: 'Exercise for rear deltoids and upper back.',
+            name: 'Face Pull',
+            description: 'Retracts and externally rotates the shoulders to target mid traps and rear delts.',
             image: BarbellCurlsImage 
+        },
+        {
+            name: 'Pull-Up',
+            description: 'Strengthens the lats by pulling the body vertically against gravity.',
+            image: BarbellCurlsImage // Placeholder
         }
     ]
 };
