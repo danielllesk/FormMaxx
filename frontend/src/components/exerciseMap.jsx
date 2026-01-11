@@ -1,6 +1,14 @@
 import BarbellCurlsImage from '../assets/biceps/BarbellCurls.png';
 import HammerCurlsImage from '../assets/biceps/HammerCurls.jpeg';
 import PreacherCurlsImage from '../assets/biceps/PreacherCurls.jpeg';
+import JMPressImage from '../assets/triceps/JMPress.png';
+import TricepPushdownImage from '../assets/triceps/TricepPushdown.png';
+import OverheadTricepsExtensionImage from '../assets/triceps/OverheadTricepsExtension.png';
+import MachineShoulderPressImage from '../assets/shoulders/MachineShoulderPress.png';
+import LateralRaisesImage from '../assets/shoulders/LateralRaises.png';
+import RearDeltFlyImage from '../assets/shoulders/RearDeltFly.png';
+import BenchPressImage from '../assets/chest/BenchPress.png';
+import InclineDumbbellPressImage from '../assets/chest/InclineDumbbellPress.png';
 
 export const exerciseMap = {
     Biceps: [
@@ -44,7 +52,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Close-grip bench press, skullcrushers',
             LimitingFactors: 'Elbow joint stress, wrist comfort',
-            image: BarbellCurlsImage
+            image: JMPressImage
         },
         {
             name: 'Triceps Pushdown',
@@ -54,7 +62,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Tricep kickbacks, single arm pushdowns, reverse pushdowns',
             LimitingFactors: 'Elbow tendons, grip fatigue',
-            image: BarbellCurlsImage // Placeholder
+            image: TricepPushdownImage
         },
         {
             name: 'Overhead Triceps Extension',
@@ -64,7 +72,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Dips, cable overhead extensions',
             LimitingFactors: 'Shoulder mobility, neck positioning, setup is difficult with heavy weight',
-            image: BarbellCurlsImage // Placeholder
+            image: OverheadTricepsExtensionImage
         }
     ],
     Shoulders: [
@@ -76,7 +84,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Barbell overhead press, dumbbell shoulder press',
             LimitingFactors: 'Machine fit, shoulder mobility, tricep fatigue',
-            image: BarbellCurlsImage // Placeholder
+            image: MachineShoulderPressImage
         },
         {
             name: 'Lateral Raises',
@@ -86,7 +94,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Cable lateral raises, machine raises',
             LimitingFactors: 'Shoulder impingement, momentum usage',
-            image: BarbellCurlsImage // Placeholder
+            image: LateralRaisesImage
         },
         {
             name: 'Rear Delt Fly',
@@ -96,7 +104,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Transverse',
             Alternatives: 'Face pulls, reverse pec deck',
             LimitingFactors: 'Upper back strength, posture',
-            image: BarbellCurlsImage // Placeholder
+            image: RearDeltFlyImage
         }
     ],
     Chest: [
@@ -108,7 +116,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Dumbbell bench, push-ups',
             LimitingFactors: 'Shoulder stress, wrist alignment',
-            image: BarbellCurlsImage // Placeholder
+            image: BenchPressImage 
         },
         {
             name: 'Incline Dumbbell Press',
@@ -118,7 +126,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Incline barbell press',
             LimitingFactors: 'Shoulder stability',
-            image: BarbellCurlsImage // Placeholder
+            image: InclineDumbbellPressImage 
         },
         {
             name: 'Chest Fly',
