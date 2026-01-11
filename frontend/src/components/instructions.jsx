@@ -8,22 +8,29 @@ export default function Instructions() {
     const exercisename = location.state?.total?.ex || "No exercise selected";
     const exerciseDetails = getExerciseByName(exercisename);
     async function handleClick() {
-        const Input = document.getElementById('video-input');
-        const res = await fetch('/analyze', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body {
-                "name": exercisename,
-                "descriptions": exerciseDetails.descriptions,
-                "instructions": exerciseDetails.instructions,
-                "target_muscles": exerciseDetails.TargetMuscles,
-                "plane_of_movement": exerciseDetails.PlaneOfMovement,
-                "alternatives": exerciseDetails.Alternatives,
-                "limiting_factors": exerciseDetails.LimitingFactors,
-                "video": Input.files[0]
-            }
-        });
-    } 
+        const input = document.getElementById("video-input");
+        const file = input?.files?.[0];
+
+        const metadata = {
+            name: exercisename,
+            descriptions: exerciseDetails.description,
+            instructions: exerciseDetails.instructions,
+            target_muscles: exerciseDetails.TargetMuscles,
+            plane_of_movement: exerciseDetails.PlaneOfMovement,
+            alternatives: exerciseDetails.Alternatives,
+            limiting_factors: exerciseDetails.LimitingFactors,
+        };  
+        const form = new FormData();
+        form.append("metadata", JSON.stringify(metadata));
+        if (file) form.append("video", file);
+
+        const res = await fetch("http://localhost:8000/analyze", {
+        method: "POST",
+        body: form,
+    });
+
+    const data = await res.json();
+}
     return (
         
         <div>
@@ -36,6 +43,7 @@ export default function Instructions() {
             <label htmlFor="video-input">Input Your Video</label>
             <input id="video-input" type="file" accept="video/*" />
             <button onClick= {() => handleClick()}>Submit Video</button>
+            <p> Feedback: {data?.feedback || "No feedback yet."}</p>
         </div>
     )
 }
