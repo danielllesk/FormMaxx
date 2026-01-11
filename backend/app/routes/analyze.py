@@ -200,20 +200,23 @@ def validate_and_clean_response(gemini_response: dict, target_muscle: str) -> di
         return None
 
 
-def get_fallback_response(target_muscle: str) -> dict:
-    if target_muscle not in Config.VALID_MUSCLES:
-        target_muscle = 'hamstrings'  # Default fallback
-    
-    return {
-        'rating': 6,
-        'summary': 'Form analysis was inconclusive due to video quality.',
-        'feedback': ['Ensure clear camera angle', 'Try again with better lighting'],
-        'muscle_analysis': {
-            'correct': [target_muscle],
-            'underactive': [],
-            'overactive': []
-        }
+def get_error_response(error_type: str, details: str = None) -> tuple:
+    error_messages = {
+        'video_upload_failed': 'Failed to upload video to analysis service. Please try again.',
+        'api_error': 'Analysis service is currently unavailable. Please try again later.',
+        'invalid_response': 'Received invalid response from analysis service. Please try again.',
+        'timeout': 'Analysis timed out. Please try again with a shorter video.',
+        'unknown': 'Unable to analyze video. Please try again.'
     }
+    
+    message = error_messages.get(error_type, error_messages['unknown'])
+    if details:
+        message += f' Details: {details}'
+    
+    return jsonify({
+        'error': message,
+        'error_type': error_type
+    }), 500
 
 
 @bp.route('/analyze', methods=['POST'])
@@ -314,10 +317,10 @@ def analyze():
                 video_file_gemini = genai.get_file(video_file_gemini.name)
             
             if video_file_gemini.state.name == "FAILED":
-                error_msg = f"Video file upload to Gemini failed"
+                error_msg = "Video file upload to analysis service failed"
                 if hasattr(video_file_gemini, 'error'):
                     error_msg += f": {video_file_gemini.error}"
-                raise Exception(error_msg)
+                return get_error_response('video_upload_failed', error_msg)
             
             response = model.generate_content(
                 [video_file_gemini, prompt]
@@ -335,20 +338,29 @@ def analyze():
             cleaned_response = validate_and_clean_response(gemini_response, target_muscle)
             
             if cleaned_response is None:
-                return jsonify(get_fallback_response(target_muscle)), 200
+                return get_error_response('invalid_response', 'Analysis response validation failed')
             
             return jsonify(cleaned_response), 200
         
         except json.JSONDecodeError as e:
             print(f"JSON decode error: {e}")
             print(f"Response text: {response_text if 'response_text' in locals() else 'N/A'}")
-            return jsonify(get_fallback_response(target_muscle)), 200
+            return get_error_response('invalid_response', 'Unable to parse analysis response')
         
         except Exception as e:
-            print(f"Gemini API error: {type(e).__name__}: {str(e)}")
+            error_msg = str(e)
+            print(f"Gemini API error: {type(e).__name__}: {error_msg}")
             import traceback
             traceback.print_exc()
-            return jsonify(get_fallback_response(target_muscle)), 200
+            
+            if 'upload' in error_msg.lower() or 'file' in error_msg.lower():
+                error_type = 'video_upload_failed'
+            elif 'timeout' in error_msg.lower():
+                error_type = 'timeout'
+            else:
+                error_type = 'api_error'
+            
+            return get_error_response(error_type, error_msg)
         
         finally:
             if temp_video_path and os.path.exists(temp_video_path):
