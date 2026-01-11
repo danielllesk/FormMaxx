@@ -24,6 +24,19 @@ import LegExtensionImage from '../assets/quadriceps/LegExtension.png';
 import RomanianDeadliftsImage from '../assets/hamstring/RomanianDeadlifts.png';
 import LyingLegCurlImage from '../assets/hamstring/LyingLegCurl.png';
 import NordicCurlImage from '../assets/hamstring/NordicCurl.png';
+import StandingCalfRaiseImage from '../assets/calves/StandingCalfRaise.jprg'; 
+import SeatedCalfRaiseImage from '../assets/calves/SeatedCalfRaise.jpeg';  
+import SingleLegCalfRaiseImage from '../assets/calves/SingleLegCalfRaise.jpeg';
+import HipThrustsImage from '../assets/glutes/HipThrusts.png';
+import BulgarianSplitSquatsImage from '../assets/glutes/BulgarianSplitSquat.png';
+import CableKickBackImages from '../assets/glutes/CableKickback.png';
+import WristCurlImage from '../assets/forearms/WristCurls.jpeg';
+import ReverseCurlImage from '../assets/forearms/ReverseCurl.jpeg';
+import FarmerCarryImage from '../assets/forearms/FarmersCarry.jpeg';
+import PullUpImage from '../assets/lats/PullUp.png';
+import LatPulldownImage from '../assets/lats/LatPulldown.png';
+import LatPullOver from '../assets/lats/latPullover.png';
+
 
 export const exerciseMap = {
     Biceps: [
@@ -259,7 +272,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Smith machine raises',
             LimitingFactors: 'Ankle mobility',
-            image: BarbellCurlsImage // Placeholder
+            image: StandingCalfRaiseImage // Placeholder
         },
         {
             name: 'Seated Calf Raise',
@@ -269,7 +282,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Dumbbell calf raises',
             LimitingFactors: 'Load tolerance',
-            image: BarbellCurlsImage // Placeholder
+            image: SeatedCalfRaiseImage // Placeholder
         },
         {
             name: 'Single-Leg Calf Raise',
@@ -279,7 +292,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Assisted versions',
             LimitingFactors: 'Balance',
-            image: BarbellCurlsImage // Placeholder
+            image: SingleLegCalfRaiseImage // Placeholder
         }
     ],
     Glutes: [
@@ -291,7 +304,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Glute bridge',
             LimitingFactors: 'Hip mobility',
-            image: BarbellCurlsImage // Placeholder
+            image: HipThrustsImage // Placeholder
         },
         {
             name: 'Bulgarian Split Squat',
@@ -301,7 +314,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Reverse lunges',
             LimitingFactors: 'Balance',
-            image: BarbellCurlsImage // Placeholder
+            image: BulgarianSplitSquatsImage // Placeholder
         },
         {
             name: 'Cable Kickback',
@@ -311,7 +324,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Reverse lunges',
             LimitingFactors: 'Balance',
-            image: BarbellCurlsImage // Placeholder
+            image: CableKickBackImages // Placeholder
         }
     ],
     Forearms: [
@@ -323,7 +336,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Bar hangs',
             LimitingFactors: 'Wrist strain',
-            image: BarbellCurlsImage // Placeholder
+            image: WristCurlImage // Placeholder
         },
         {
             name: 'Reverse Curl',
@@ -333,7 +346,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Bar hangs',
             LimitingFactors: 'Wrist strain',
-            image: BarbellCurlsImage // Placeholder
+            image: ReverseCurlImage // Placeholder
         },
         {
             name: 'Farmer’s Carry',
@@ -343,7 +356,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Bar hangs',
             LimitingFactors: 'Wrist strain',
-            image: BarbellCurlsImage // Placeholder
+            image: FarmerCarryImage // Placeholder
         }
     ],
     Lats: [
@@ -355,7 +368,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image: PullUpImage // Placeholder
         },
         {
             name: 'Lat Pulldown',
@@ -365,7 +378,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image: LatPulldownImage // Placeholder
         },
         {
             name: 'Straight-Arm Pulldown',
@@ -375,7 +388,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image:  LatPullOver // Placeholder
         }
     ],
     Traps: [
