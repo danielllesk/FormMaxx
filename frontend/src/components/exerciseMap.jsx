@@ -1,7 +1,6 @@
 import BarbellCurlsImage from '../assets/biceps/BarbellCurls.png';
 import HammerCurlsImage from '../assets/biceps/HammerCurls.jpeg';
 import PreacherCurlsImage from '../assets/biceps/PreacherCurls.jpeg';
-<<<<<<< HEAD
 import JMPressImage from '../assets/triceps/JMPress.png';
 import TricepPushdownImage from '../assets/triceps/TricepPushdown.png';
 import OverheadTricepsExtensionImage from '../assets/triceps/OverheadTricepsExtension.png';
@@ -10,14 +9,21 @@ import LateralRaisesImage from '../assets/shoulders/LateralRaises.png';
 import RearDeltFlyImage from '../assets/shoulders/RearDeltFly.png';
 import BenchPressImage from '../assets/chest/BenchPress.png';
 import InclineDumbbellPressImage from '../assets/chest/InclineDumbbellPress.png';
-=======
 import bentOverRowImage from '../assets/upperBack/bentOverRow.png';
 import facePullImage from '../assets/upperBack/facePull.png';
 import pullUpImage from '../assets/upperBack/pullUps.png';
 import shrugsImage from '../assets/traps/shrugs.jpg';
 import uprightRowImage from '../assets/traps/upRightRows.jpeg';
-
->>>>>>> 2e4f268291937ac0e432fe45634f402730e65cac
+import ChestFlyImage from '../assets/chest/ChestFly.png';
+import PlankImage from '../assets/abdomen/Plank.png';
+import HangingLegRaiseImage from '../assets/abdomen/HangingLegRaise.png';
+import RussianTwistImage from '../assets/abdomen/RussianTwist.png';
+import SquatImage from '../assets/quadriceps/Squat.png';
+import LegPressImage from '../assets/quadriceps/LegPress.png';
+import LegExtensionImage from '../assets/quadriceps/LegExtension.png';
+import RomanianDeadliftsImage from '../assets/hamstring/RomanianDeadlifts.png';
+import LyingLegCurlImage from '../assets/hamstring/LyingLegCurl.png';
+import NordicCurlImage from '../assets/hamstring/NordicCurl.png';
 
 export const exerciseMap = {
     Biceps: [
@@ -145,7 +151,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Transverse',
             Alternatives: 'Cable fly, pec deck',
             LimitingFactors: 'Shoulder strain, overextension',
-            image: BarbellCurlsImage // Placeholder
+            image: ChestFlyImage
         }
     ],
     Abdomen: [
@@ -157,7 +163,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Isometric',
             Alternatives: 'Dead bug, hollow hold',
             LimitingFactors: 'Core endurance, lower back pain',
-            image: BarbellCurlsImage // Placeholder
+            image: PlankImage
         },
         {
             name: 'Hanging Leg Raise',
@@ -167,7 +173,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Captain’s chair raises',
             LimitingFactors: 'Grip strength, hip flexor dominance',
-            image: BarbellCurlsImage // Placeholder
+            image: HangingLegRaiseImage
         },
         {
             name: 'Russian Twist',
@@ -177,7 +183,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Transverse',
             Alternatives: 'Cable woodchoppers',
             LimitingFactors: 'Lower back mobility',
-            image: BarbellCurlsImage // Placeholder
+            image: RussianTwistImage // Placeholder
         }
     ],
     Quandriceps: [
@@ -189,7 +195,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Goblet squat, leg press',
             LimitingFactors: 'Ankle mobility, knee pain',
-            image: BarbellCurlsImage // Placeholder
+            image: SquatImage // Placeholder
         },
         {
             name: 'Leg Press',
@@ -199,7 +205,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Hack squat',
             LimitingFactors: 'Knee stress',
-            image: BarbellCurlsImage // Placeholder
+            image: LegPressImage // Placeholder
         },
         {
             name: 'Leg Extension',
@@ -209,7 +215,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Sissy squats',
             LimitingFactors: 'Knee joint stress',
-            image: BarbellCurlsImage // Placeholder
+            image: LegExtensionImage // Placeholder
         }
     ],
     Hamstrings: [
@@ -221,7 +227,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Good mornings',
             LimitingFactors: 'Hamstring flexibility',
-            image: BarbellCurlsImage // Placeholder
+            image: RomanianDeadliftsImage // Placeholder
         },
         {
             name: 'Lying Leg Curl',
@@ -231,7 +237,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Stability ball curls',
             LimitingFactors: 'Knee discomfort',
-            image: BarbellCurlsImage // Placeholder
+            image: LyingLegCurlImage // Placeholder
         },
         {
             name: 'Nordic Curl',
@@ -241,7 +247,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Assisted Nordics',
             LimitingFactors: 'Strength level',
-            image: BarbellCurlsImage // Placeholder
+            image: NordicCurlImage // Placeholder
         }
     ],
     Calves: [
