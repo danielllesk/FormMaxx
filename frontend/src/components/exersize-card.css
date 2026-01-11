@@ -1,39 +1,42 @@
 .exersize-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: var(--surface);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px var(--shadow);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    max-width: 400px;
 }
 
 .exersize-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary);
 }
 
 .exersize-title {
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    padding: 1rem;
     margin: 0;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.25rem;
+    color: var(--text-primary);
     text-align: center;
     font-weight: 700;
-    border-bottom: 2px solid #667eea;
+    background: var(--surface-light);
+    border-bottom: 3px solid var(--primary);
 }
 
 .exersize-image-placeholder {
     width: 100%;
-    height: 250px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 200px;
+    background: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-bottom: 1px solid var(--border);
 }
 
 .exersize-image-placeholder img {
@@ -43,40 +46,46 @@
 }
 
 .exersize-image-placeholder span {
-    color: #999;
+    color: var(--text-muted);
     font-size: 1rem;
     font-weight: 500;
 }
 
 .exersize-description {
-    padding: 1.5rem;
+    padding: 1rem;
     margin: 0;
-    color: #666;
-    font-size: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
     line-height: 1.6;
     flex-grow: 1;
     text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .exersize-button {
-    margin: 0 1.5rem 1.5rem 1.5rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.875rem 1.25rem;
+    background: var(--primary);
     color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .exersize-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .exersize-button:active {
-    transform: scale(0.98);
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
-

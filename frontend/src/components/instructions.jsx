@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { exerciseMap, getExerciseByName } from './exerciseMap.jsx'; 
+import './instructions.css';
 
 export default function Instructions() {
     const location = useLocation();
@@ -56,28 +57,40 @@ export default function Instructions() {
             setLoading(false);
         }
     }
+    
     return (
-        
-        <div>
+        <div className="instructions-page">
             <div className="instructions-header">
-            <Link to="/exercise" className="back-button" onClick={() => navigate(-1)}>← Go Back</Link>
-            <h1>Instructions for {exercisename}</h1>
+                <Link to="/exercise" className="back-button" onClick={() => navigate(-1)}>
+                    ← Go Back
+                </Link>
+                <h1>Instructions for {exercisename}</h1>
             </div>
-            <img src={exerciseDetails.image} alt={exercisename} />
-            <p>{exerciseDetails.instructions}</p>
-            <label htmlFor="video-input">Input Your Video</label>
-            <input id="video-input" type="file" accept="video/*" />
-            <button onClick={() => handleClick()} disabled={loading}>
-                {loading ? "Analyzing..." : "Submit Video"}
-            </button>
             
-            {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+            <div className="instructions-content">
+                <img src={exerciseDetails.image} alt={exercisename} />
+                <p>{exerciseDetails.instructions}</p>
+            </div>
+            
+            <div className="video-upload-section">
+                <label htmlFor="video-input">Upload Your Exercise Video</label>
+                <input id="video-input" type="file" accept="video/*" />
+                <button onClick={() => handleClick()} disabled={loading}>
+                    {loading ? "Analyzing..." : "Submit Video for Analysis"}
+                </button>
+            </div>
+            
+            {error && <p className="error-message">Error: {error}</p>}
             
             {data && (
-                <div>
+                <div className="analysis-results">
                     <h3>Analysis Results</h3>
-                    <p><strong>Rating:</strong> {data.rating}/10</p>
+                    <p>
+                        <strong>Rating:</strong> 
+                        <span className="rating-display">{data.rating}/10</span>
+                    </p>
                     <p><strong>Summary:</strong> {data.summary}</p>
+                    
                     <div>
                         <strong>Feedback:</strong>
                         <ul>
@@ -86,11 +99,12 @@ export default function Instructions() {
                             ))}
                         </ul>
                     </div>
-                    <div>
+                    
+                    <div className="muscle-analysis-section">
                         <strong>Muscle Analysis:</strong>
-                        <p>Correct: {data.muscle_analysis?.correct?.join(', ') || 'None'}</p>
-                        <p>Underactive: {data.muscle_analysis?.underactive?.join(', ') || 'None'}</p>
-                        <p>Overactive: {data.muscle_analysis?.overactive?.join(', ') || 'None'}</p>
+                        <p><strong>Correct:</strong> {data.muscle_analysis?.correct?.join(', ') || 'None'}</p>
+                        <p><strong>Underactive:</strong> {data.muscle_analysis?.underactive?.join(', ') || 'None'}</p>
+                        <p><strong>Overactive:</strong> {data.muscle_analysis?.overactive?.join(', ') || 'None'}</p>
                     </div>
                 </div>
             )}

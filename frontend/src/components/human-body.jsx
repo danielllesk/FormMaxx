@@ -26,7 +26,8 @@ export default function HumanBody() {
         navigate("/exercise", { state: { muscle: muscle.label } })
     }
     return (
-        <div>
+        <div className="human-body-page">
+        <h1 className="welcome-title">Welcome to FormMaxx</h1>
         <h2>Select a Muscle to Target: {setLabel}</h2>
             <div className="human-body-container"> 
                 <img className="Human-img" src={humanAnatomy} alt="Human Body" />
