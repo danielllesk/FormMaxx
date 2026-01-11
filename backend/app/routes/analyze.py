@@ -185,14 +185,19 @@ def validate_and_clean_response(gemini_response: dict, target_muscle: str) -> di
         underactive = final_underactive
         overactive = final_overactive
         
+        # Format muscle names for display (convert underscores to spaces and capitalize)
+        correct_display = [Config.format_muscle_for_display(m) for m in correct]
+        underactive_display = [Config.format_muscle_for_display(m) for m in underactive]
+        overactive_display = [Config.format_muscle_for_display(m) for m in overactive]
+        
         return {
             'rating': rating,
             'summary': str(summary),
             'feedback': [str(f) for f in feedback[:5]], 
             'muscle_analysis': {
-                'correct': correct,
-                'underactive': underactive,
-                'overactive': overactive
+                'correct': correct_display,
+                'underactive': underactive_display,
+                'overactive': overactive_display
             }
         }
     

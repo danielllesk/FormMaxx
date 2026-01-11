@@ -28,7 +28,7 @@ class Config:
         "forearms",
         "lats",
         "traps",
-        "upper_back"
+        "upper back"
     ]
     
     MUSCLE_MAPPING = {
@@ -49,15 +49,15 @@ class Config:
         "shoulders": "shoulders",
         
         "pectorals": "chest",
-        "pectoralis_major": "chest",
+        "pectoralis major": "chest",
         "pectoralis": "chest",
-        "upper_pectorals": "chest",
+        "upper pectorals": "chest",
         "chest": "chest",
         
         "rectus_abdominis": "abdomen",
-        "transverse_abdominis": "abdomen",
+        "transverse abdominis": "abdomen",
         "obliques": "abdomen",
-        "lower_abs": "abdomen",
+        "lower abs": "abdomen",
         "abs": "abdomen",
         "abdomen": "abdomen",
         "core": "abdomen",
@@ -83,7 +83,7 @@ class Config:
 
         "forearms": "forearms",
         "forearm": "forearms",
-        "forearm_flexors": "forearms",
+        "forearm flexors": "forearms",
         
 
         "latissimus_dorsi": "lats",
@@ -91,15 +91,15 @@ class Config:
         "lat": "lats",
         
         "trapezius": "traps",
-        "upper_trapezius": "traps",
+        "upper trapezius": "traps",
         "traps": "traps",
         "trap": "traps",
-        "rhomboids": "upper_back",
-        "upper_back": "upper_back",
-        "mid_traps": "upper_back",
+        "rhomboids": "upper back",
+        "upper back": "upper back",
+        "mid traps": "upper back",
         
-        "lower_back": "upper_back",
-        "erector_spinae": "upper_back"
+        "lower back": "upper_back",
+        "erector spinae": "upper back"
     }
     
     @staticmethod
@@ -115,4 +115,14 @@ class Config:
             if key in normalized or normalized in key:
                 return value
             return normalized
+    
+    @staticmethod
+    def format_muscle_for_display(muscle_name: str) -> str:
+        """Convert muscle name from internal format (e.g., 'upper_back') to display format (e.g., 'Upper Back')."""
+        if not muscle_name:
+            return muscle_name
+        
+        # Replace underscores with spaces and capitalize each word
+        formatted = muscle_name.replace('_', ' ').title()
+        return formatted
 
