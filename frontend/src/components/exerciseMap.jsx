@@ -130,7 +130,7 @@ export const exerciseMap = {
         {
             name: 'Incline Dumbbell Press',
             description: 'Emphasizes upper chest.',
-            instructions: '1. Set bench at incline.\n2. Press dumbbells upward.\n3. Lower under control.',
+            instructions: '1. Set bench at incline of about 45-60 degree.\n2. Press dumbbells upward.\n3. Lower under control.',
             TargetMuscles: 'Upper pectorals, shoulders',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Incline barbell press',
@@ -140,7 +140,7 @@ export const exerciseMap = {
         {
             name: 'Chest Fly',
             description: 'Isolation movement for chest stretch and contraction.',
-            instructions: '1. Lower arms wide with slight bend.\n2. Bring hands together above chest.',
+            instructions: '1. Lower arms wide with slight bend.\n2. Bring hands together above chest with slightly bent arms.',
             TargetMuscles: 'Pectoralis major',
             PlaneOfMovement: 'Transverse',
             Alternatives: 'Cable fly, pec deck',
@@ -184,7 +184,7 @@ export const exerciseMap = {
         {
             name: 'Squat',
             description: 'Primary lower-body compound movement.',
-            instructions: '1. Sit back and down.\n2. Drive through heels to stand.',
+            instructions: '1. Sit back and down with braced core, and bar going down on straight path.\n2. Drive through heels to stand.',
             TargetMuscles: 'Quadriceps, glutes',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Goblet squat, leg press',
@@ -194,7 +194,7 @@ export const exerciseMap = {
         {
             name: 'Leg Press',
             description: 'Machine-based quad emphasis.',
-            instructions: '1. Press platform away.\n2. Lower slowly.',
+            instructions: '1. Press platform away.\n2. Lower slowly.\n3. Do not over extend knees.',
             TargetMuscles: 'Quadriceps',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Hack squat',
@@ -216,7 +216,7 @@ export const exerciseMap = {
         {
             name: 'Romanian Deadlifts',
             description: 'Hip hinge focusing on hamstrings.',
-            instructions: '1. Push hips back.\n2. Keep bar close to legs.',
+            instructions: '1. Push hips back with braced core.\n2. Keep bar close to legs.',
             TargetMuscles: 'Hamstrings, glutes',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Good mornings',
@@ -300,7 +300,7 @@ export const exerciseMap = {
         {
             name: 'Cable Kickback',
             description: 'Isolates the glutes through controlled hip extension using constant cable tension.',
-            instructions: '1. Stand with feet shoulder-width apart.\n2. Push hips back.\n3. Lower slowly.',
+            instructions: '1. Stand with feet shoulder-width apart with cable around ankle.\n2. Push leg back until almost parallel to ground.\n3. Lower slowly.',
             TargetMuscles: 'Glutes, quads',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Reverse lunges',
@@ -322,7 +322,7 @@ export const exerciseMap = {
         {
             name: 'Reverse Curl',
             description: 'Targets the brachioradialis by curling weight with a pronated grip.',
-            instructions: '1. Hold a barbell or dumbbell with palms facing down.\n2. Flex wrists upward, keeping elbows stationary.\n3. Return slowly.',
+            instructions: '1. Hold a barbell or dumbbell with palms facing down (pronated grip).\n2. Flex wrists upward, keeping elbows stationary.\n3. Return slowly.',
             TargetMuscles: 'Forearm flexors',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Bar hangs',
@@ -332,7 +332,7 @@ export const exerciseMap = {
         {
             name: 'Farmer’s Carry',
             description: 'Builds grip and forearm endurance by carrying heavy loads over distance.',
-            instructions: '1. Hold a barbell or dumbbell with palms facing down.\n2. Flex wrists upward, keeping elbows stationary.\n3. Return slowly.',
+            instructions: '1. Hold a barbell or dumbbell with palms facing down and weight by your side.\n2. Walk forward while maintaining a strong grip.\n3. Keep core engaged and shoulders back.',
             TargetMuscles: 'Forearm flexors',
             PlaneOfMovement: 'Sagittal',
             Alternatives: 'Bar hangs',
@@ -354,7 +354,7 @@ export const exerciseMap = {
         {
             name: 'Lat Pulldown',
             description: 'Mimics a pull-up to train the lats using adjustable resistance.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1. Sit at a lat pulldown machine and grip the bar wider than shoulder width.\n2. Pull the bar down to your upper chest, squeezing the lats.\n3. Slowly return to the starting position.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
@@ -364,7 +364,7 @@ export const exerciseMap = {
         {
             name: 'Straight-Arm Pulldown',
             description: 'Isolates the lats by extending the shoulders with straight arms.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1. Stand at a cable machine with a straight bar attachment.\n2. With arms straight, pull the bar down to your thighs by extending the shoulders.\n3. Slowly return to the starting position.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
@@ -376,7 +376,7 @@ export const exerciseMap = {
         {
             name: 'Shrugs',
             description: 'Elevates the shoulders under load to strengthen the upper trapezius.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1. Stand upright holding dumbbells or a barbell at your sides.\n2. Elevate your shoulders as high as possible.\n3. Hold briefly, then lower back down.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
@@ -386,7 +386,7 @@ export const exerciseMap = {
         {
             name: 'Upright Row',
             description: 'Pulls weight vertically to engage the upper traps and shoulders.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1. Stand upright holding a barbell or dumbbells in front of you with an overhand grip.\n2. Pull the weight straight up toward your chin, keeping it close to your body.\n3. Lower slowly.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
@@ -396,7 +396,7 @@ export const exerciseMap = {
         {
             name: 'Face Pull',
             description: 'Retracts and externally rotates the shoulders to target mid traps and rear delts.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1. Attach Rope: Secure a rope to a cable pulley set at or slightly above head height.\n2. Grip: Hold the rope with a neutral grip (palms facing each other), thumbs up.\n3. Step Back: Take a few steps back to create tension, keeping arms extended.\n4. Stance: Stand with feet shoulder-width apart or staggered, core engaged, and a slight lean back for balance.\n5. Pull: Pull the rope towards your face (forehead/eyes), keeping your elbows high and flared out to the sides.\n6. Split: As you pull, try to split the rope apart, as if pulling the ends to your ears.\n7. Squeeze: At the peak, squeeze your shoulder blades together and pause for a second, feeling your rear delts.\n8. Return: Slowly extend your arms back to the starting position with control, avoiding momentum.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
@@ -408,7 +408,7 @@ export const exerciseMap = {
         {
             name: 'Bent-Over Row',
             description: 'Builds dense upper-back musculature using a fixed-bar rowing motion.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
@@ -418,7 +418,7 @@ export const exerciseMap = {
         {
             name: 'Face Pull',
             description: 'Retracts and externally rotates the shoulders to target mid traps and rear delts.',
-            instructions: '1. Hang from a pull-up bar with hands slightly wider than shoulder width.\n2. Pull your body up until your chin is over the bar.\n3. Lower slowly.',
+            instructions: '1. Attach Rope: Secure a rope to a cable pulley set at or slightly above head height.\n2. Grip: Hold the rope with a neutral grip (palms facing each other), thumbs up.\n3. Step Back: Take a few steps back to create tension, keeping arms extended.\n4. Stance: Stand with feet shoulder-width apart or staggered, core engaged, and a slight lean back for balance.\n5. Pull: Pull the rope towards your face (forehead/eyes), keeping your elbows high and flared out to the sides.\n6. Split: As you pull, try to split the rope apart, as if pulling the ends to your ears.\n7. Squeeze: At the peak, squeeze your shoulder blades together and pause for a second, feeling your rear delts.\n8. Return: Slowly extend your arms back to the starting position with control, avoiding momentum.',
             TargetMuscles: 'Lats',
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
