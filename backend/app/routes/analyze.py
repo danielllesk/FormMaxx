@@ -301,9 +301,13 @@ def analyze():
         temp_video_path = None
         video_file_gemini = None
         try:
+            # Ensure upload folder exists and is writable
+            upload_dir = Config.UPLOAD_FOLDER
+            os.makedirs(upload_dir, exist_ok=True)
+            
             temp_fd, temp_video_path = tempfile.mkstemp(
                 suffix='.' + video_file.filename.rsplit('.', 1)[1].lower(),
-                dir=Config.UPLOAD_FOLDER
+                dir=upload_dir
             )
             video_file.save(temp_video_path)
             os.close(temp_fd)
@@ -381,6 +385,11 @@ def analyze():
                 pass
     
     except Exception as e:
+        import traceback
+        error_trace = traceback.format_exc()
+        print(f"Unexpected error in analyze endpoint: {type(e).__name__}: {str(e)}")
+        print(f"Traceback:\n{error_trace}")
         return jsonify({
-            'error': f'Internal server error: {str(e)}'
+            'error': f'Internal server error: {str(e)}',
+            'error_type': 'unexpected_error'
         }), 500
