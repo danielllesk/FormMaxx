@@ -340,7 +340,7 @@
 **Alternatives:** Assisted pull-ups  
 **Limiting Factors:** Elbow strain
 
-### 3. Straight-Arm Pulldown
+### 3. Lat Pullover
 **Description:** Isolates the lats by extending the shoulders with straight arms.
 **Target:** Lats  
 **Plane:** Sagittal  
