@@ -186,9 +186,16 @@ def validate_and_clean_response(gemini_response: dict, target_muscle: str) -> di
         overactive = final_overactive
         
         # Format muscle names for display (convert underscores to spaces and capitalize)
-        correct_display = [Config.format_muscle_for_display(m) for m in correct]
-        underactive_display = [Config.format_muscle_for_display(m) for m in underactive]
-        overactive_display = [Config.format_muscle_for_display(m) for m in overactive]
+        try:
+            correct_display = [Config.format_muscle_for_display(m) for m in correct if m]
+            underactive_display = [Config.format_muscle_for_display(m) for m in underactive if m]
+            overactive_display = [Config.format_muscle_for_display(m) for m in overactive if m]
+        except Exception as format_error:
+            print(f"Error formatting muscle names: {format_error}")
+            # Fallback to original names if formatting fails
+            correct_display = correct
+            underactive_display = underactive
+            overactive_display = overactive
         
         return {
             'rating': rating,
