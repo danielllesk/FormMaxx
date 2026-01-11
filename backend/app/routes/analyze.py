@@ -79,9 +79,14 @@ Rate the user's form on a scale from 0 to 10, where:
 
 2. MUSCLE ENGAGEMENT ANALYSIS  
 Using biomechanical cause-and-effect reasoning, determine which muscles are:
-- Correctly engaged
-- Underactive (should be contributing more)
-- Overactive or compensating
+
+- CORRECTLY ENGAGED: List ONLY the PRIMARY target muscles that are actively and appropriately contributing to the movement as intended. Do NOT list stabilizing muscles that are just passively engaged unless they are specifically required for this exercise.
+
+- UNDERACTIVE: List muscles from the target list that should be working but appear weak, disengaged, or not contributing enough. These are muscles that should be active but aren't.
+
+- OVERACTIVE/COMPENSATING: List muscles that are working too hard, taking over, or compensating for weak target muscles. These often include muscles that shouldn't be primary movers in this exercise (e.g., shoulders compensating for weak biceps, or lower back compensating for weak core).
+
+CRITICAL: For isolated exercises (like preacher curls, bicep curls), ONLY the primary target muscles should be in "correct". Stabilizers like core, lats, or back muscles should typically be in "overactive" if they're engaging, or not listed at all if they're appropriately minimal.
 
 ONLY use muscle names from this list:
 {valid_muscles_str}
@@ -90,6 +95,7 @@ ONLY use muscle names from this list:
 Explain muscle engagement based on movement mechanics, for example:
 - How sway, posture, or joint positioning shifts load away from the target muscles
 - Why compensating muscles activate in response to instability or weak engagement
+- Why target muscles might be underactive (poor form, momentum, compensation patterns)
 
 4. COACHING FEEDBACK  
 Provide 2–3 short, actionable coaching cues that directly correct the biomechanical issues you identified.
@@ -117,6 +123,9 @@ Return your response STRICTLY in the following JSON format and nothing else:
 IMPORTANT CONSTRAINTS:
 - Do not invent or reference muscles outside the provided list.
 - Do not include the same muscle in more than one category.
+- Be CRITICAL: For isolated exercises, list ONLY primary target muscles in "correct". Stabilizers should be in "overactive" if they're engaging, or omitted entirely.
+- DO NOT list stabilizing muscles (core, back, shoulders, etc.) as "correct" unless they are specifically required primary movers for this exercise.
+- If NO muscles are overactive or underactive, you may leave those arrays empty, but be thorough - most form issues involve some compensation.
 - If uncertain, choose the most biomechanically plausible explanation.
 """
     return prompt
@@ -358,4 +367,3 @@ def analyze():
         return jsonify({
             'error': f'Internal server error: {str(e)}'
         }), 500
-
