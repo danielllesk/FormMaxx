@@ -13,7 +13,7 @@ class Config:
     UPLOAD_FOLDER = '/tmp/formmaxx_uploads'
     ALLOWED_EXTENSIONS = {'mp4', 'mov', 'avi', 'webm', 'mkv'}
     
-    GEMINI_TIMEOUT = 30
+    GEMINI_TIMEOUT = 120  # Increased timeout for video analysis (2 minutes)
     
     VALID_MUSCLES = [
         "biceps",

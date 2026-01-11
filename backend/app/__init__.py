@@ -8,7 +8,13 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
     
-    CORS(app)
+    # Configure CORS to allow all origins and methods
+    CORS(app, 
+         origins="*",
+         methods=["GET", "POST", "OPTIONS"],
+         allow_headers=["Content-Type", "Authorization"],
+         supports_credentials=False)
+    
     init_app(app)
     
     from app.routes import health, analyze
