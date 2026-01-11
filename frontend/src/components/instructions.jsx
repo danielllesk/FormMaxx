@@ -38,7 +38,7 @@ export default function Instructions() {
             form.append("exercise", JSON.stringify(exercise));
             form.append("video", file);
 
-            const res = await fetch("http://localhost:8000/analyze", {
+            const res = await fetch("https://formmaxx.onrender.com/analyze", {
                 method: "POST",
                 body: form,
             });

@@ -1,6 +1,12 @@
 import BarbellCurlsImage from '../assets/biceps/BarbellCurls.png';
 import HammerCurlsImage from '../assets/biceps/HammerCurls.jpeg';
 import PreacherCurlsImage from '../assets/biceps/PreacherCurls.jpeg';
+import bentOverRowImage from '../assets/upperBack/bentOverRow.png';
+import facePullImage from '../assets/upperBack/facePull.png';
+import pullUpImage from '../assets/upperBack/pullUps.png';
+import shrugsImage from '../assets/traps/shrugs.jpg';
+import uprightRowImage from '../assets/traps/upRightRows.jpeg';
+
 
 export const exerciseMap = {
     Biceps: [
@@ -364,7 +370,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image: shrugsImage
         },
         {
             name: 'Upright Row',
@@ -374,7 +380,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image: uprightRowImage
         },
         {
             name: 'Face Pull',
@@ -384,7 +390,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image: facePullImage
         }
     ],
     'Upper Back': [
@@ -396,7 +402,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage 
+            image: bentOverRowImage
         },
         {
             name: 'Face Pull',
@@ -406,7 +412,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage 
+            image: facePullImage
         },
         {
             name: 'Pull-Up',
@@ -416,7 +422,7 @@ export const exerciseMap = {
             PlaneOfMovement: 'Frontal',
             Alternatives: 'Lat pulldown',
             LimitingFactors: 'Bodyweight strength',
-            image: BarbellCurlsImage // Placeholder
+            image: pullUpImage // Placeholder
         }
     ]
 };
